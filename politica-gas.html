@@ -6,74 +6,100 @@
     <title>Política de Privacidade</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
-        :root { --cor-tema: #6b21a8; }
+        :root { 
+            --cor-tema: #6b21a8; 
+            --max-width-content: 65ch; /* Medida ideal para legibilidade (Senior Dev technique) */
+        }
+        
         body {
             font-family: 'Inter', sans-serif;
-            margin: 0; padding: 0; min-height: 100vh;
-            background-color: var(--cor-tema); /* Cor de fundo externa */
+            background-color: var(--cor-tema);
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
         }
+
         .app-card {
-            background-color: white; /* Conteúdo sempre no branco para leitura */
-            color: #1a202c;
-            max-width: 650px;
+            background-color: white; 
+            max-width: 800px;
             margin: 40px auto;
-            border-radius: 28px;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
             overflow: hidden;
         }
-        /* Títulos automáticos com a cor do tema */
+
+        .readable-content {
+            max-width: var(--max-width-content);
+            margin-left: auto;
+            margin-right: auto;
+            hyphens: auto; /* Evita buracos no texto justificado */
+            word-wrap: break-word;
+        }
+
         .titulo-item {
             color: var(--cor-tema);
             font-weight: 800;
-            font-size: 1.15rem;
-            margin-top: 35px;
-            margin-bottom: 10px;
+            font-size: 1.25rem;
+            margin-top: 2.5rem;
+            margin-bottom: 0.75rem;
             display: block;
-            text-transform: uppercase;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
         }
+
         .texto-corpo {
             color: #374151;
-            line-height: 1.7;
-            font-size: 1.05rem;
-            text-align: justify;
-            margin-bottom: 16px;
-        }
-        .texto-introducao {
-            color: #4b5563;
+            line-height: 1.75;
             font-size: 1.1rem;
-            line-height: 1.7;
-            text-align: center;
-            font-style: normal;
+            margin-bottom: 1.5rem;
+            text-align: left; /* Padrão mobile para não "espalhar" */
         }
+
+        @media (min-width: 768px) {
+            .texto-corpo {
+                text-align: justify; /* Justificado apenas em telas grandes */
+            }
+        }
+
         @media (max-width: 640px) {
-            .app-card { margin: 0; border-radius: 0; min-height: 100vh; }
-            .container-padding { padding: 24px; }
+            .app-card { 
+                margin: 0; 
+                border-radius: 0; 
+                min-height: 100vh;
+            }
+            .container-padding { padding: 1.5rem; }
+            .texto-corpo { font-size: 1rem; }
         }
     </style>
 </head>
-<body id="body-bg">
+<body id="body-bg" class="p-0 sm:p-4">
 
     <div class="app-card">
-        <div class="container-padding p-8 md:p-12">
-            <header class="mb-10 border-b border-gray-100 pb-8 text-center">
-                <h1 id="app-titulo-principal" class="text-2xl md:text-3xl font-extrabold tracking-tight mb-4" style="color: var(--cor-tema);"></h1>
-                <p id="app-introducao" class="texto-introducao"></p>
+        <article class="container-padding p-8 md:p-16">
+            
+            <header class="mb-12 border-b border-gray-100 pb-10 text-center">
+                <h1 id="app-titulo-principal" class="text-3xl md:text-4xl font-extrabold tracking-tight mb-6 leading-tight" style="color: var(--cor-tema);"></h1>
+                <div class="readable-content">
+                    <p id="app-introducao" class="text-gray-500 text-lg md:text-xl leading-relaxed"></p>
+                </div>
             </header>
 
-            <main id="conteudo-legal">
-                <!-- O texto processado entrará aqui via JS -->
+            <main id="conteudo-legal" class="readable-content">
+                <!-- O conteúdo processado via JS entrará aqui -->
             </main>
 
-            <footer class="mt-12 pt-8 border-t border-gray-100">
-                <div class="bg-gray-50 rounded-2xl p-6 text-center">
-                    <p id="ultima-atualizacao" class="text-sm font-bold text-gray-500"></p>
-                    <p class="text-xs text-gray-400 mt-2">
-                        © <span id="ano-atual"></span> <span id="app-footer-nome" class="font-bold"></span>. Todos os direitos reservados.
-                    </p>
+            <footer class="mt-16 pt-10 border-t border-gray-100">
+                <div class="bg-gray-50 rounded-3xl p-8 text-center">
+                    <p id="ultima-atualizacao" class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4"></p>
+                    <div class="text-xs text-gray-400 leading-loose">
+                        <p>© <span id="ano-atual"></span> <span id="app-footer-nome" class="font-bold text-gray-600"></span></p>
+                        <p>Todos os direitos reservados.</p>
+                    </div>
                 </div>
             </footer>
-        </div>
+
+        </article>
     </div>
 
     <script>
@@ -81,18 +107,17 @@
             tituloApp: "Política de Privacidade – Meu Gás: Controle e Duração",
             corTema: "#4c1d95", 
             dataAtualizacao: "Maio de 2026",
-            nomeAppManual: "Meu Gás: Controle e Duração", // Se deixar vazio, ele puxa do título automaticamente
+            nomeAppManual: "Meu Gás: Controle e Duração", 
 
             introducao: "Esta Política de Privacidade descreve como o aplicativo Meu Gás: Controle e Duração trata as informações dos usuários, prezando pela transparência e clareza.",
 
             /* 
-               MODO DE USO:
-               - Use # para criar um TÍTULO (ele ficará em negrito e na cor do tema).
-               - Escreva normalmente para criar parágrafos de texto.
-               - Não apague ` no inicio e no final: textoLegal: `caso contrário não vai exibir textos.
+                MODO DE USO:
+                - Use # para criar um TÍTULO.
+                - Escreva normalmente para criar parágrafos.
+                - Mantenha a crase ` no início e no fim.
             */
             textoLegal: `
-
 # 1. Coleta de Dados Pessoais
 O desenvolvedor não coleta, não armazena e não compartilha dados pessoais dos usuários. Todas as informações inseridas no aplicativo permanecem exclusivamente no dispositivo do usuário.
 
@@ -157,40 +182,33 @@ Caso tenha qualquer dúvida sobre esta política ou sobre o funcionamento do apl
 E-mail de Contato: suporte.agneonpower@gmail.com
 
 Responsável: Alziro Guarany
-
             `
         };
 
         function renderizarPolitica() {
-            // Aplicar Cores
             document.documentElement.style.setProperty('--cor-tema', CONFIG.corTema);
             document.getElementById('body-bg').style.backgroundColor = CONFIG.corTema;
 
-            // Extrair nome do App para o Copyright
             const partesTitulo = CONFIG.tituloApp.split(' – ');
             const nomeExtraido = partesTitulo.length > 1 ? partesTitulo[1] : CONFIG.tituloApp;
             const nomeFinalApp = CONFIG.nomeAppManual.trim() !== "" ? CONFIG.nomeAppManual : nomeExtraido;
 
-            // Inserir textos básicos
             document.getElementById('app-titulo-principal').innerText = CONFIG.tituloApp;
             document.getElementById('app-introducao').innerText = CONFIG.introducao;
             document.getElementById('app-footer-nome').innerText = nomeFinalApp;
             document.getElementById('ultima-atualizacao').innerText = "Última atualização: " + CONFIG.dataAtualizacao;
             document.getElementById('ano-atual').innerText = new Date().getFullYear();
 
-            // Processar o Texto Legal (Transformar # em Títulos)
             const main = document.getElementById('conteudo-legal');
-            const linhas = CONFIG.textoLegal.split('\n');
+            const linhas = CONFIG.textoLegal.trim().split('\n');
             let htmlFinal = "";
 
             linhas.forEach(linha => {
                 let textoLimpo = linha.trim();
                 if (textoLimpo.startsWith('#')) {
-                    // Remove o # e cria um título estilizado
                     let titulo = textoLimpo.replace('#', '').trim();
                     htmlFinal += `<span class="titulo-item">${titulo}</span>`;
                 } else if (textoLimpo !== "") {
-                    // Cria um parágrafo normal
                     htmlFinal += `<p class="texto-corpo">${textoLimpo}</p>`;
                 }
             });
@@ -198,7 +216,6 @@ Responsável: Alziro Guarany
             main.innerHTML = htmlFinal;
         }
 
-        // Este comando ativa tudo quando a página abre. Seguro e rápido.
         window.onload = renderizarPolitica;
     </script>
 </body>
