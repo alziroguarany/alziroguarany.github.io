@@ -3,117 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidade - Meu Gás</title>
+    <title>Política de Privacidade</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Estilização do Fundo (Lilás Escuro) */
+        :root { --cor-tema: #6b21a8; }
         body {
-            background-color: #4B0082; /* Indigo/Lilás Escuro */
-            margin: 0;
-            padding: 20px;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            display: flex;
-            justify-content: center;
+            font-family: 'Inter', sans-serif;
+            margin: 0; padding: 0; min-height: 100vh;
+            background-color: var(--cor-tema); /* Cor de fundo externa */
         }
-
-        /* Container de Leitura (Fundo Branco e Verticalização) */
-        .container {
-            background-color: #ffffff;
-            max-width: 600px; /* Garante que não espalhe em telas largas */
-            width: 100%;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            box-sizing: border-box;
+        .app-card {
+            background-color: white; /* Conteúdo sempre no branco para leitura */
+            color: #1a202c;
+            max-width: 650px;
+            margin: 40px auto;
+            border-radius: 28px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
-
-        /* Títulos e Destaques (Lilás Escuro) */
-        h1, h2, h3, strong {
-            color: #4B0082;
+        /* Títulos automáticos com a cor do tema */
+        .titulo-item {
+            color: var(--cor-tema);
+            font-weight: 800;
+            font-size: 1.15rem;
+            margin-top: 35px;
+            margin-bottom: 10px;
+            display: block;
+            text-transform: uppercase;
         }
-
-        h1 {
-            font-size: 1.5rem;
+        .texto-corpo {
+            color: #374151;
+            line-height: 1.7;
+            font-size: 1.05rem;
+            text-align: justify;
+            margin-bottom: 16px;
+        }
+        .texto-introducao {
+            color: #4b5563;
+            font-size: 1.1rem;
+            line-height: 1.7;
             text-align: center;
-            border-bottom: 2px solid #f0f0f0;
-            padding-bottom: 15px;
-            margin-bottom: 25px;
+            font-style: normal;
         }
-
-        h2 {
-            font-size: 1.2rem;
-            margin-top: 25px;
-        }
-
-        /* Texto Geral (Preto) */
-        p, li {
-            color: #000000;
-            line-height: 1.6;
-            font-size: 1rem;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        .footer {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            font-size: 0.9rem;
-        }
-
-        /* Ajuste para links */
-        a {
-            color: #4B0082;
-            text-decoration: underline;
+        @media (max-width: 640px) {
+            .app-card { margin: 0; border-radius: 0; min-height: 100vh; }
+            .container-padding { padding: 24px; }
         }
     </style>
 </head>
-<body>
+<body id="body-bg">
 
-    <div class="container">
-        <h1>Política de Privacidade – Meu Gás: Controle e Duração</h1>
+    <div class="app-card">
+        <div class="container-padding p-8 md:p-12">
+            <header class="mb-10 border-b border-gray-100 pb-8 text-center">
+                <h1 id="app-titulo-principal" class="text-2xl md:text-3xl font-extrabold tracking-tight mb-4" style="color: var(--cor-tema);"></h1>
+                <p id="app-introducao" class="texto-introducao"></p>
+            </header>
 
-        <p>Esta Política de Privacidade descreve como o aplicativo <strong>Meu Gás: Controle e Duração</strong> trata as informações dos usuários, prezando pela transparência e clareza.</p>
+            <main id="conteudo-legal">
+                <!-- O texto processado entrará aqui via JS -->
+            </main>
 
-        <h2>1. Coleta de Dados Pessoais</h2>
-        <p>O desenvolvedor não coleta, não armazena e não compartilha dados pessoais dos usuários. Todas as informações inseridas no aplicativo permanecem exclusivamente no dispositivo do usuário.</p>
-
-        <h2>2. Publicidade (Google AdMob)</h2>
-        <p>Para possibilitar o acesso gratuito, o aplicativo exibe anúncios por meio do serviço Google AdMob.</p>
-        <p><strong>O que é coletado:</strong> O Google AdMob pode coletar identificadores técnicos do dispositivo (como o ID de publicidade) e outros dados necessários para a exibição e personalização de anúncios.</p>
-
-        <h2>3. Controle e Exclusão de Dados</h2>
-        <p>Os dados inseridos no aplicativo são seus, e você pode acessá-los ou excluí-los a qualquer momento pelo próprio app.</p>
-        <p>De acordo com a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018), você tem direitos sobre suas informações. Caso queira exercer esses direitos, basta entrar em contato pelo nosso canal oficial.</p>
-        
-        <ul>
-            <li><strong>Armazenamento Local:</strong> Todos os dados são salvos apenas no seu dispositivo.</li>
-            <li><strong>Exclusão:</strong> O aplicativo permite que o usuário exclua seus dados a qualquer momento através das configurações ou menus internos. Ao desinstalar o app, todas as informações serão apagadas permanentemente e não poderão ser recuperadas. A responsabilidade pelo gerenciamento e exclusão dos dados é inteiramente do usuário.</li>
-        </ul>
-
-        <h2>4. Funcionalidades do Aplicativo</h2>
-        <p>O aplicativo pode oferecer funcionalidades como compartilhamento do app e redirecionamento para avaliação na Google Play. O compartilhamento utiliza recursos nativos do dispositivo, sem coleta de dados pessoais. Ao acessar a Google Play, o usuário estará sujeito às políticas da plataforma.</p>
-
-        <h2>5. Processamento de Dados</h2>
-        <p>Todos os cálculos são processados localmente, sem envio de informações para servidores externos.</p>
-
-        <h2>6. Atualizações da Política de Privacidade</h2>
-        <p>Esta Política de Privacidade pode ser atualizada a qualquer momento para refletir melhorias ou mudanças no aplicativo. Recomendamos que o usuário consulte regularmente esta seção, a fim de estar sempre informado sobre eventuais alterações.</p>
-
-        <h2>7. Legislação e Foro</h2>
-        <p>Este termo é regido pela legislação brasileira. Todas as questões, litígios ou reclamações relacionadas à interpretação, execução ou uso do aplicativo serão solucionados perante o Foro da Comarca de Itaboraí/RJ, eleito pelas partes como competente, mesmo que haja outro mais privilegiado, observadas as disposições legais aplicáveis ao consumidor.</p>
-
-        <h2>8. Contato</h2>
-        <p>Caso tenha qualquer dúvida sobre esta política ou sobre o funcionamento do aplicativo, entre em contato pelo canal oficial:</p>
-        
-        <p><strong>E-mail de Contato:</strong> suporte.agneonpower@gmail.com</p>
-        <p><strong>Responsável:</strong> Alziro Guarany</p>
-
-        <div class="footer">
-            <p><strong>Última atualização:</strong> Maio de 2026</p>
+            <footer class="mt-12 pt-8 border-t border-gray-100">
+                <div class="bg-gray-50 rounded-2xl p-6 text-center">
+                    <p id="ultima-atualizacao" class="text-sm font-bold text-gray-500"></p>
+                    <p class="text-xs text-gray-400 mt-2">
+                        © <span id="ano-atual"></span> <span id="app-footer-nome" class="font-bold"></span>. Todos os direitos reservados.
+                    </p>
+                </div>
+            </footer>
         </div>
     </div>
 
+    <script>
+        const CONFIG = {
+            tituloApp: "Política de Privacidade – Meu Gás: Controle e Duração",
+            corTema: "#4c1d95", 
+            dataAtualizacao: "Maio de 2026",
+            nomeAppManual: "Meu Gás: Controle e Duração", // Se deixar vazio, ele puxa do título automaticamente
+
+            introducao: "Esta Política de Privacidade descreve como o aplicativo Meu Gás: Controle e Duração trata as informações dos usuários, prezando pela transparência e clareza.",
+
+            /* 
+               MODO DE USO:
+               - Use # para criar um TÍTULO (ele ficará em negrito e na cor do tema).
+               - Escreva normalmente para criar parágrafos de texto.
+            */
+            textoLegal: `
+
+# 1. Coleta de Dados Pessoais
+O desenvolvedor não coleta, não armazena e não compartilha dados pessoais dos usuários. Todas as informações inseridas no aplicativo permanecem exclusivamente no dispositivo do usuário.
+
+# 2. Publicidade (Google AdMob)
+
+Para possibilitar o acesso gratuito, o aplicativo exibe anúncios por meio do serviço Google AdMob.
+
+O que é coletado: O Google AdMob pode coletar identificadores técnicos do dispositivo (como o ID de publicidade) e outros dados necessários para a exibição e personalização de anúncios.
+
+# 3. Controle e Exclusão de Dados
+
+Os dados inseridos no aplicativo são seus, e você pode acessá-los ou excluí-los a qualquer momento pelo próprio app.
+
+De acordo com a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018), você tem direitos sobre suas informações. Caso queira exercer esses direitos, basta entrar em contato pelo nosso canal oficial.
+
+Armazenamento Local: Todos os dados inseridos são salvos exclusivamente no seu dispositivo móvel, garantindo a sua privacidade e autonomia.
+Exclusão pelo Usuário: Você pode excluir seus registros a qualquer momento através das opções disponíveis em configurações ou nos menus internos do aplicativo.
+Ao desinstalar o aplicativo, realizar a limpeza de dados ou a limpeza de cache nas configurações do sistema, as informações armazenadas localmente serão apagadas permanentemente e não poderão ser recuperadas por meio próprio do app. O gerenciamento e a exclusão dos dados ficam sob controle do próprio usuário.
+
+No entanto, se o recurso de Backup Automático do Android estiver ativo em seu aparelho, uma cópia das informações poderá permanecer vinculada à sua conta Google na nuvem para futuras restaurações, conforme citado no item 7 deste documento.
+
+# 4. Funcionalidades do Aplicativo
+
+O aplicativo pode oferecer funcionalidades como compartilhamento do app e redirecionamento para avaliação na Google Play. O compartilhamento utiliza recursos nativos do dispositivo, sem coleta de dados pessoais. Ao acessar a Google Play, o usuário estará sujeito às políticas da plataforma.
+
+# 5. Processamento de Dados
+Todos os cálculos são processados localmente, sem envio de informações para servidores externos.
+
+# 6. Tela Inicial e Documentos Legais
+No primeiro acesso ao aplicativo, ou a qualquer reinstalação, é exibida a tela de Documentos Legais, contendo nossa Política de Privacidade e Termos de Uso com links diretos para visualização e leitura. Para acessar o app, o usuário precisa clicar em Entrar, confirmando assim a concordância com nossa Política de Privacidade e Termos de Uso. Ao clicar em Entrar, o aplicativo registra apenas a data, a hora e o identificador do dispositivo. Esses dados não permitem a identificação pessoal do usuário, não são enviados a servidores externos e permanecem armazenados exclusivamente no próprio dispositivo. O objetivo desse registro é garantir transparência quanto à concordância com nossa Política de Privacidade e Termos de Uso.
+
+# 7. Backup Automático e Segurança de Dados
+Para evitar que você perca suas informações ao trocar de dispositivo ou reinstalar o aplicativo, o Meu Gás: Controle e Duração utiliza o recurso nativo de Backup Automático do Sistema Android.
+
+O aplicativo utiliza o serviço de backup automático do Android (Google Backup), sujeito a limites de armazenamento, disponibilidade e eventuais alterações de política por parte do Google. Não nos responsabilizamos pela perda de dados decorrente de limitações, falhas ou mudanças nesse serviço.
+
+Como funciona: O aplicativo está configurado para permitir que o sistema Android realize cópias de segurança automáticas dos dados locais (banco de dados).
+
+Destino dos dados: Essas cópias são enviadas para a nuvem do Google, vinculada à sua Conta Google pessoal. Os dados são armazenados de forma privada em uma área de backup do Google Drive, não sendo acessíveis por terceiros ou pelo desenvolvedor do aplicativo.
+
+Restauração: Ao reinstalar o aplicativo ou configurar um novo dispositivo com a mesma conta Google, o sistema Android restaurará automaticamente suas informações.
+
+Requisitos e Limitações: O funcionamento deste recurso depende de:
+A opção "Backup" estar ativada nas configurações do seu dispositivo Android.
+Conexão ativa com a internet (preferencialmente Wi-Fi).
+Estar logado em uma Conta Google válida.
+
+Embora o recurso utilize a infraestrutura de segurança do Google, recomendamos que o usuário mantenha as configurações de backup do sistema sempre ativas, ciente de que o processo é gerenciado inteiramente pelo sistema operacional Android e pelos serviços do Google.
+
+# 8. Atualizações da Política de Privacidade
+Esta Política de Privacidade pode ser atualizada a qualquer momento para refletir melhorias ou mudanças no aplicativo. Recomendamos que o usuário consulte regularmente esta seção, a fim de estar sempre informado sobre eventuais alterações.
+
+
+# 9. Legislação e Foro
+Este termo é regido pela legislação brasileira.
+Todas as questões, litígios ou reclamações relacionadas à interpretação, execução ou uso do aplicativo serão solucionados perante o Foro da Comarca de Itaboraí/RJ, eleito pelas partes como competente, mesmo que haja outro mais privilegiado, observadas as disposições legais aplicáveis ao consumidor.
+
+
+# 10. Contato
+Caso tenha qualquer dúvida sobre esta política ou sobre o funcionamento do aplicativo, entre em contato pelo canal oficial:
+
+E-mail de Contato: suporte.agneonpower@gmail.com
+
+Responsável: Alziro Guarany
+
+            `
+        };
+
+        function renderizarPolitica() {
+            // Aplicar Cores
+            document.documentElement.style.setProperty('--cor-tema', CONFIG.corTema);
+            document.getElementById('body-bg').style.backgroundColor = CONFIG.corTema;
+
+            // Extrair nome do App para o Copyright
+            const partesTitulo = CONFIG.tituloApp.split(' – ');
+            const nomeExtraido = partesTitulo.length > 1 ? partesTitulo[1] : CONFIG.tituloApp;
+            const nomeFinalApp = CONFIG.nomeAppManual.trim() !== "" ? CONFIG.nomeAppManual : nomeExtraido;
+
+            // Inserir textos básicos
+            document.getElementById('app-titulo-principal').innerText = CONFIG.tituloApp;
+            document.getElementById('app-introducao').innerText = CONFIG.introducao;
+            document.getElementById('app-footer-nome').innerText = nomeFinalApp;
+            document.getElementById('ultima-atualizacao').innerText = "Última atualização: " + CONFIG.dataAtualizacao;
+            document.getElementById('ano-atual').innerText = new Date().getFullYear();
+
+            // Processar o Texto Legal (Transformar # em Títulos)
+            const main = document.getElementById('conteudo-legal');
+            const linhas = CONFIG.textoLegal.split('\n');
+            let htmlFinal = "";
+
+            linhas.forEach(linha => {
+                let textoLimpo = linha.trim();
+                if (textoLimpo.startsWith('#')) {
+                    // Remove o # e cria um título estilizado
+                    let titulo = textoLimpo.replace('#', '').trim();
+                    htmlFinal += `<span class="titulo-item">${titulo}</span>`;
+                } else if (textoLimpo !== "") {
+                    // Cria um parágrafo normal
+                    htmlFinal += `<p class="texto-corpo">${textoLimpo}</p>`;
+                }
+            });
+
+            main.innerHTML = htmlFinal;
+        }
+
+        // Este comando ativa tudo quando a página abre. Seguro e rápido.
+        window.onload = renderizarPolitica;
+    </script>
 </body>
 </html>
