@@ -4,102 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de Privacidade</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    
     <style>
-        :root { 
-            --cor-tema: #6b21a8; 
-            --max-width-content: 65ch; /* Medida ideal para legibilidade (Senior Dev technique) */
+        :root {
+            /* Cor de fundo da página e dos títulos */
+            --cor-tema: #4c1d95; 
         }
-        
+
         body {
-            font-family: 'Inter', sans-serif;
             background-color: var(--cor-tema);
-            -webkit-font-smoothing: antialiased;
-            text-rendering: optimizeLegibility;
+            margin: 0;
+            padding: 20px;
+            /* Fonte de sistema para máxima legibilidade e rapidez */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
         }
 
-        .app-card {
-            background-color: white; 
-            max-width: 800px;
-            margin: 40px auto;
-            border-radius: 24px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            overflow: hidden;
+        .container {
+            background-color: #FFFFFF;
+            max-width: 600px; 
+            width: 100%;
+            padding: 40px 30px;
+            box-sizing: border-box;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            line-height: 1.6;
+            color: #000000;
         }
 
-        .readable-content {
-            max-width: var(--max-width-content);
-            margin-left: auto;
-            margin-right: auto;
-            hyphens: auto; /* Evita buracos no texto justificado */
-            word-wrap: break-word;
+        h1 {
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--cor-tema);
+            line-height: 1.2;
+        }
+
+        .introducao {
+            color: #4b5563;
+            font-size: 1.05rem;
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
         }
 
         .titulo-item {
             color: var(--cor-tema);
-            font-weight: 800;
-            font-size: 1.25rem;
-            margin-top: 2.5rem;
-            margin-bottom: 0.75rem;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
             display: block;
-            line-height: 1.2;
-            letter-spacing: -0.02em;
         }
 
-        .texto-corpo {
-            color: #374151;
-            line-height: 1.75;
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            text-align: left; /* Padrão mobile para não "espalhar" */
+        p {
+            margin-bottom: 15px;
+            /* Evita que palavras grandes quebrem o layout, mas sem hifenização */
+            word-wrap: break-word;
+            text-align: left; /* Garante que o texto não fique espalhado com buracos */
         }
 
-        @media (min-width: 768px) {
-            .texto-corpo {
-                text-align: justify; /* Justificado apenas em telas grandes */
-            }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 0.85rem;
+            text-align: center;
+            color: #666;
         }
 
-        @media (max-width: 640px) {
-            .app-card { 
-                margin: 0; 
+        @media (max-width: 480px) {
+            body { padding: 0; }
+            .container { 
+                padding: 30px 20px; 
                 border-radius: 0; 
                 min-height: 100vh;
             }
-            .container-padding { padding: 1.5rem; }
-            .texto-corpo { font-size: 1rem; }
+            h1 { font-size: 1.5rem; }
         }
     </style>
 </head>
-<body id="body-bg" class="p-0 sm:p-4">
+<body>
 
-    <div class="app-card">
-        <article class="container-padding p-8 md:p-16">
-            
-            <header class="mb-12 border-b border-gray-100 pb-10 text-center">
-                <h1 id="app-titulo-principal" class="text-3xl md:text-4xl font-extrabold tracking-tight mb-6 leading-tight" style="color: var(--cor-tema);"></h1>
-                <div class="readable-content">
-                    <p id="app-introducao" class="text-gray-500 text-lg md:text-xl leading-relaxed"></p>
-                </div>
-            </header>
+    <div class="container">
+        <header>
+            <h1 id="app-titulo-principal"></h1>
+            <p id="app-introducao" class="introducao"></p>
+        </header>
 
-            <main id="conteudo-legal" class="readable-content">
-                <!-- O conteúdo processado via JS entrará aqui -->
-            </main>
+        <main id="conteudo-legal">
+            <!-- O texto dinâmico entrará aqui -->
+        </main>
 
-            <footer class="mt-16 pt-10 border-t border-gray-100">
-                <div class="bg-gray-50 rounded-3xl p-8 text-center">
-                    <p id="ultima-atualizacao" class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4"></p>
-                    <div class="text-xs text-gray-400 leading-loose">
-                        <p>© <span id="ano-atual"></span> <span id="app-footer-nome" class="font-bold text-gray-600"></span></p>
-                        <p>Todos os direitos reservados.</p>
-                    </div>
-                </div>
-            </footer>
-
-        </article>
+        <footer class="footer">
+            <p id="ultima-atualizacao" style="font-weight: bold; margin-bottom: 5px;"></p>
+            <p>© <span id="ano-atual"></span> <span id="app-footer-nome"></span>. Todos os direitos reservados.</p>
+        </footer>
     </div>
 
     <script>
@@ -107,7 +108,7 @@
             tituloApp: "Política de Privacidade – Meu Gás: Controle e Duração",
             corTema: "#4c1d95", 
             dataAtualizacao: "Maio de 2026",
-            nomeAppManual: "Meu Gás: Controle e Duração", 
+            nomeAppManual: "", 
 
             introducao: "Esta Política de Privacidade descreve como o aplicativo Meu Gás: Controle e Duração trata as informações dos usuários, prezando pela transparência e clareza.",
 
@@ -186,19 +187,22 @@ Responsável: Alziro Guarany
         };
 
         function renderizarPolitica() {
+            // Aplicar a cor do tema às variáveis e ao fundo
             document.documentElement.style.setProperty('--cor-tema', CONFIG.corTema);
-            document.getElementById('body-bg').style.backgroundColor = CONFIG.corTema;
-
+            
+            // Extrair nome do App
             const partesTitulo = CONFIG.tituloApp.split(' – ');
             const nomeExtraido = partesTitulo.length > 1 ? partesTitulo[1] : CONFIG.tituloApp;
             const nomeFinalApp = CONFIG.nomeAppManual.trim() !== "" ? CONFIG.nomeAppManual : nomeExtraido;
 
+            // Preencher campos fixos
             document.getElementById('app-titulo-principal').innerText = CONFIG.tituloApp;
             document.getElementById('app-introducao').innerText = CONFIG.introducao;
             document.getElementById('app-footer-nome').innerText = nomeFinalApp;
             document.getElementById('ultima-atualizacao').innerText = "Última atualização: " + CONFIG.dataAtualizacao;
             document.getElementById('ano-atual').innerText = new Date().getFullYear();
 
+            // Processar o corpo do texto
             const main = document.getElementById('conteudo-legal');
             const linhas = CONFIG.textoLegal.trim().split('\n');
             let htmlFinal = "";
@@ -209,7 +213,7 @@ Responsável: Alziro Guarany
                     let titulo = textoLimpo.replace('#', '').trim();
                     htmlFinal += `<span class="titulo-item">${titulo}</span>`;
                 } else if (textoLimpo !== "") {
-                    htmlFinal += `<p class="texto-corpo">${textoLimpo}</p>`;
+                    htmlFinal += `<p>${textoLimpo}</p>`;
                 }
             });
 
