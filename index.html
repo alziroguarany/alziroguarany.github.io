@@ -12,10 +12,10 @@
         :root {
             --bg-color: #ffffff;
             --section-bg: #f8faff;
-            --card-blue: #f4f9ff; /* Azul bem clarinho e suave */
-            --primary: #2563eb; /* Azul Principal */
+            --card-blue: #f4f9ff;
+            --primary: #2563eb;
             --primary-dark: #1e40af;
-            --accent-lilac: #8b5cf6; /* Lilás */
+            --accent-lilac: #8b5cf6;
             --text-main: #1e293b;
             --text-muted: #64748b;
             --card-shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.1);
@@ -42,7 +42,6 @@
             letter-spacing: -0.02em;
         }
 
-        /* --- NAVEGAÇÃO --- */
         header {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(12px);
@@ -96,7 +95,6 @@
             color: var(--primary);
         }
 
-        /* DROPDOWN */
         .dropdown {
             position: relative;
         }
@@ -154,7 +152,6 @@
             letter-spacing: 0.08em;
         }
 
-        /* --- HERO SECTION --- */
         .hero {
             padding: 180px 24px 100px;
             text-align: center;
@@ -182,7 +179,6 @@
             margin: 0 auto 40px;
         }
 
-        /* --- CARDS & GRIDS --- */
         section {
             padding: 100px 24px;
             max-width: 1100px;
@@ -298,9 +294,8 @@
             color: white;
         }
 
-        /* --- YOUTUBE SECTION (Com fundo unificado) --- */
         .youtube-section {
-            background-color: var(--card-blue); /* Fundo igual aos cards dos apps */
+            background-color: var(--card-blue);
             border-radius: 48px;
             padding: 80px 60px;
             margin: 40px auto;
@@ -366,7 +361,6 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
 
-        /* --- FOOTER --- */
         footer {
             padding: 100px 24px 60px;
             border-top: 1px solid var(--border-color);
@@ -391,7 +385,6 @@
             margin: 0 auto;
         }
 
-        /* --- MOBILE --- */
         @media (max-width: 768px) {
             .nav-menu { 
                 gap: 12px;
@@ -432,7 +425,6 @@
     </header>
 
     <main>
-        <!-- HERO -->
         <section class="hero">
             <h1>Soluções Digitais & <span>Inteligência Artificial.</span></h1>
             <p>Criando ferramentas práticas e compartilhando conhecimento para transformar a sua relação com a tecnologia.</p>
@@ -442,7 +434,6 @@
             </div>
         </section>
 
-        <!-- MEUS APPS -->
         <section id="apps">
             <div class="section-header">
                 <h2>Meus Aplicativos</h2>
@@ -450,10 +441,21 @@
             </div>
 
             <div class="apps-grid">
-                <!-- App 1 -->
+                <!-- App 1: AG Finanças -->
+                <div class="card">
+                    <div class="card-icon" style="color: #10b981; border-color: #a7f3d0;">💰</div>
+                    <h3>AG Finanças: Controle Gastos</h3>
+                    <p>Assuma o controle total da sua vida financeira com o AG Finanças: Controle Gastos. Gerencie suas contas de forma prática, acompanhando renda, despesas e assinaturas.</p>
+                    <div class="btn-group">
+                        <a href="https://play.google.com/store/apps/details?id=com.seuapp.agfinanceirocontrolegastos" class="btn btn-primary" target="_blank">Download Play Store</a>
+                        <a href="https://alziroguarany.github.io/agfinanceirocontrolegastos.html" class="btn btn-outline" target="_blank">Privacidade</a>
+                    </div>
+                </div>
+
+                <!-- App 2: Meu Gás -->
                 <div class="card">
                     <div class="card-icon" style="color: #ef4444; border-color: #fca5a5;">🔥</div>
-                    <h3>Meu Gás: Controle</h3>
+                    <h3>Meu Gás: Controle e Duração</h3>
                     <p>Mantenha o controle total do seu botijão. Uma ferramenta indispensável para prever a duração do gás baseada no seu consumo real.</p>
                     <div class="btn-group">
                         <a href="https://play.google.com/store/apps/details?id=com.ag.previsodogs" class="btn btn-primary" target="_blank">Download Play Store</a>
@@ -461,10 +463,10 @@
                     </div>
                 </div>
 
-                <!-- App 2 -->
+                <!-- App 3: Combustível -->
                 <div class="card">
                     <div class="card-icon" style="color: #2563eb; border-color: #93c5fd;">⛽</div>
-                    <h3>Calculadora de Combustível</h3>
+                    <h3>AG Combustível - Meu Consumo</h3>
                     <p>Economize na hora de abastecer. Saiba rapidamente se compensa usar Álcool ou Gasolina com cálculos de eficiência em tempo real.</p>
                     <div class="btn-group">
                         <a href="https://play.google.com/store/apps/details?id=com.neonlab.combustivel" class="btn btn-primary" target="_blank">Download Play Store</a>
@@ -474,7 +476,6 @@
             </div>
         </section>
 
-        <!-- YOUTUBE -->
         <section id="youtube">
             <div class="youtube-section">
                 <div class="yt-visual" title="Canal de Tecnologia"></div>
@@ -488,7 +489,7 @@
     </main>
 
     <footer>
-        <a href="#" class="footer-logo">Alziro<span>Guarany</span></a>
+        <a href="#" class="footer-logo">Alziro <span> Guarany</span></a>
         <p class="copyright">© 2026 · Alziro Guarany · Desenvolvedor Android & Professor.<br>Transformando tecnologia em simplicidade para todos.</p>
     </footer>
 
