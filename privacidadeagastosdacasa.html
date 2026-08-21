@@ -3,129 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidade - AG Gastos e Contas da Casa</title>
+    <title>Política de Privacidade</title>
     <style>
-        @page {
-            size: A4;
-            margin: 0;
-            background-color: #003300; /* Verde escuro nas bordas/fundo da página */
+        :root {
+            /* Cor de fundo da página e dos títulos */
+            --cor-tema: #4c1d95; 
         }
+
         body {
+            background-color: var(--cor-tema);
             margin: 0;
-            padding: 0;
-            background-color: #003300; /* Fundo verde escuro conforme solicitado */
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            padding: 20px;
+            /* Fonte de sistema para máxima legibilidade e rapidez */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            justify-content: center;
         }
-        /* Container principal para simular modo leitura de app */
-        .content-wrapper {
+
+        .container {
+            background-color: #FFFFFF;
+            max-width: 600px; 
             width: 100%;
-            max-width: 600px; /* Largura restrita para leitura vertical confortável */
-            background-color: #ffffff; /* Fundo do texto branco */
-            margin: 0 auto;
             padding: 40px 30px;
             box-sizing: border-box;
-            min-height: 100vh;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            line-height: 1.6;
+            color: #000000;
         }
+
         h1 {
-            color: #003300; /* Título em verde escuro */
-            font-size: 20pt;
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--cor-tema);
+            line-height: 1.2;
+        }
+
+        .introducao {
+            color: #4b5563;
+            font-size: 1.05rem;
             text-align: center;
             margin-bottom: 30px;
-            border-bottom: 2px solid #003300;
-            padding-bottom: 10px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
         }
-        h2 {
-            color: #003300; /* Subtítulos em destaque verde escuro */
-            font-size: 15pt;
+
+        .titulo-item {
+            color: var(--cor-tema);
+            font-weight: bold;
+            font-size: 1.2rem;
             margin-top: 25px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        p {
             margin-bottom: 15px;
-            border-left: 5px solid #003300;
-            padding-left: 10px;
+            /* Evita que palavras grandes quebrem o layout, mas sem hifenização */
+            word-wrap: break-word;
+            text-align: left; /* Garante que o texto não fique espalhado com buracos */
         }
-        p, li {
-            color: #000000; /* Restante cor preta */
-            font-size: 11pt;
-            line-height: 1.6;
-            margin-bottom: 12px;
-            text-align: left;
-        }
-        .last-update {
-            font-style: italic;
+
+        .footer {
             margin-top: 40px;
-            border-top: 1px solid #ddd;
             padding-top: 20px;
-            color: #555;
+            border-top: 1px solid #eee;
+            font-size: 0.85rem;
             text-align: center;
+            color: #666;
         }
-        strong {
-            color: #003300;
+
+        @media (max-width: 480px) {
+            body { padding: 0; }
+            .container { 
+                padding: 30px 20px; 
+                border-radius: 0; 
+                min-height: 100vh;
+            }
+            h1 { font-size: 1.5rem; }
         }
     </style>
 </head>
 <body>
-    <div class="content-wrapper">
-        <h1>Política de Privacidade AG Gastos e Contas da Casa</h1>
 
-        <p>Esta Política de Privacidade descreve como o aplicativo AG Gastos e Contas da Casa trata as informações dos usuários, prezando pela transparência e clareza.</p>
+    <div class="container">
+        <header>
+            <h1 id="app-titulo-principal"></h1>
+            <p id="app-introducao" class="introducao"></p>
+        </header>
 
-        <h2>1. Coleta de Dados Pessoais</h2>
-        <p>O desenvolvedor não coleta, não armazena e não compartilha dados pessoais dos usuários. Todas as informações inseridas no aplicativo permanecem exclusivamente no dispositivo do usuário.</p>
-        <p>As informações inseridas no aplicativo são armazenadas apenas no dispositivo do usuário.</p>
-        <p>O desenvolvedor não possui acesso aos dados inseridos no aplicativo.</p>
-        <p>O aplicativo não exige cadastro nem solicita informações pessoais como nome, CPF ou dados bancários para funcionar. No entanto, para utilizar o app é necessário aceitar nossa Política de Privacidade e nossos Termos de Uso logo na instalação. Ao clicar em “Entrar”, você confirma estar de acordo com esses documentos legais.</p>
-        <p>Durante o acesso, o aplicativo registra apenas a data, a hora e o identificador do dispositivo. Esses dados não são enviados a servidores externos, permanecendo armazenados exclusivamente no próprio dispositivo do usuário. O objetivo desse registro é garantir transparência quanto à concordância com nossa Política de Privacidade e Termos de Uso.</p>
-        <p>O aplicativo pode utilizar serviços de terceiros que realizam coleta de dados de forma independente, conforme descrito nesta política.</p>
+        <main id="conteudo-legal">
+            <!-- O texto dinâmico entrará aqui -->
+        </main>
 
-        <h2>2. Publicidade (Google AdMob)</h2>
-        <p>Para possibilitar o acesso gratuito, o aplicativo exibe anúncios por meio do serviço Google AdMob.</p>
-        <p><strong>O que é coletado:</strong> O Google AdMob pode coletar identificadores técnicos do dispositivo (como o ID de publicidade) e outros dados necessários para a exibição e personalização de anúncios.</p>
-
-        <h2>3. Seus controles de privacidade</h2>
-        <p>Os dados inseridos no aplicativo são seus, e você pode acessá-los ou excluí-los a qualquer momento pelo próprio app.</p>
-        <p>De acordo com a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018), você tem direitos sobre suas informações. Caso queira exercer esses direitos, basta entrar em contato pelo nosso canal oficial.</p>
-        <p><strong>Armazenamento Local:</strong> Todos os dados inseridos são salvos exclusivamente no seu dispositivo móvel, garantindo a sua privacidade e autonomia.</p>
-        <p><strong>Exclusão pelo Usuário:</strong> Você pode excluir seus registros a qualquer momento através das opções disponíveis em configurações ou nos menus internos do aplicativo.</p>
-        <p>Ao desinstalar o app, todas as informações serão apagadas permanentemente e não poderão ser recuperadas por meio próprio do app. O gerenciamento e a exclusão dos dados ficam sob controle do próprio usuário.</p>
-        <p>No entanto, se o recurso de Backup Automático do Android estiver ativo em seu aparelho, uma cópia das informações poderá permanecer vinculada à sua conta Google na nuvem para futuras restaurações, conforme citado no item 6 deste documento.</p>
-
-        <h2>4. Funcionalidades do Aplicativo</h2>
-        <p>O aplicativo pode oferecer funcionalidades como compartilhamento do app e redirecionamento para avaliação na Google Play. O compartilhamento utiliza recursos nativos do dispositivo, sem coleta de dados pessoais. Ao acessar a Google Play, o usuário estará sujeito às políticas da plataforma.</p>
-
-        <h2>5. Exportação de Dados e Backup Manual</h2>
-        <p>O aplicativo pode permitir a exportação de informações para arquivos em formatos como PDF e Excel.</p>
-        <p>Esses arquivos são gerados a partir dos dados inseridos pelo usuário e podem ser salvos no dispositivo ou em outro local definido pelo próprio usuário.</p>
-        <p>As funções de exportação, backup e restauração são feitas diretamente pelo usuário, incluindo a escolha do local de salvamento. Nenhum dado é enviado para servidores externos.</p>
-
-        <h2>6. Backup Automático e Segurança de Dados</h2>
-        <p>Para garantir que você não perca suas informações ao trocar de dispositivo ou reinstalar o aplicativo, o AG Gastos e Contas da Casa utiliza o recurso nativo de Backup Automático do Sistema Android.</p>
-        <p><strong>Como funciona:</strong> O aplicativo está configurado para permitir que o sistema Android realize cópias de segurança automáticas dos dados locais (banco de dados de despesas, assinaturas e preferências de tema).</p>
-        <p><strong>Destino dos dados:</strong> Essas cópias são enviadas criptografadas para a nuvem do Google, vinculada à sua Conta Google pessoal. Os dados são armazenados de forma privada em uma área de backup do Google Drive, não sendo acessíveis por terceiros ou pelo desenvolvedor do aplicativo.</p>
-        <p><strong>Restauração:</strong> Ao reinstalar o aplicativo ou configurar um novo dispositivo com a mesma conta Google, o sistema Android restaurará automaticamente suas informações.</p>
-        <p><strong>Requisitos e Limitações:</strong> O funcionamento deste recurso depende de:<br>
-        • A opção "Backup" estar ativada nas configurações do seu dispositivo Android.<br>
-        • Conexão ativa com a internet (preferencialmente Wi-Fi).<br>
-        • Estar logado em uma Conta Google válida.</p>
-        <p>Embora o recurso utilize a infraestrutura de segurança do Google, recomendamos que o usuário mantenha as configurações de backup do sistema sempre ativas, ciente de que o processo é gerenciado inteiramente pelo sistema operacional Android e pelos serviços do Google.</p>
-
-        <h2>7. Processamento de Dados</h2>
-        <p>Todos os cálculos são processados localmente, sem envio de informações para servidores externos.</p>
-
-        <h2>8. Atualizações da Política de Privacidade</h2>
-        <p>Esta Política de Privacidade pode ser atualizada a qualquer momento para refletir melhorias ou mudanças no aplicativo. Recomendamos que o usuário consulte regularmente esta seção, a fim de estar sempre informado sobre eventuais alterações.</p>
-
-        <h2>9. Legislação e Foro</h2>
-        <p>Este termo é regido pela legislação brasileira.</p>
-        <p>Todas as questões, litígios ou reclamações relacionadas à interpretação, execução ou uso do aplicativo serão solucionados perante o Foro da Comarca de Itaboraí/RJ, eleito pelas partes como competente, mesmo que haja outro mais privilegiado, observadas as disposições legais aplicáveis ao consumidor.</p>
-
-        <h2>10. Contato</h2>
-        <p>Caso tenha qualquer dúvida sobre esta política ou sobre o funcionamento do aplicativo, entre em contato pelo canal oficial:</p>
-        <p><strong>E-mail de Contato:</strong> suporte.agneonpower@gmail.com</p>
-        <p><strong>Responsável:</strong> Alziro Guarany</p>
-
-        <p class="last-update">Última atualização: Maio de 2026</p>
+        <footer class="footer">
+            <p id="ultima-atualizacao" style="font-weight: bold; margin-bottom: 5px;"></p>
+            <p>© <span id="ano-atual"></span> <span id="app-footer-nome"></span>. Todos os direitos reservados.</p>
+        </footer>
     </div>
+
+    <script>
+        const CONFIG = {
+            tituloApp: "Política de Privacidade AG Gastos e Contas da Casa",
+            corTema: "#4c1d95", 
+            dataAtualizacao: "Agosto de 2026",
+            nomeAppManual: "AG Gastos e Contas da Casa", 
+
+            introducao: "Esta Política de Privacidade descreve como o aplicativo AG Gastos e Contas da Casa trata as informações dos usuários, prezando pela transparência e clareza.",
+
+            /* 
+                MODO DE USO:
+                - Use # para criar um TÍTULO.
+                - Escreva normalmente para criar parágrafos.
+                - Mantenha a crase ` no início e no fim.
+            */
+            textoLegal: `
+# 1. Coleta de Dados Pessoais
+O desenvolvedor não coleta, não armazena e não compartilha dados pessoais dos usuários. Todas as informações inseridas no aplicativo permanecem exclusivamente no dispositivo do usuário.
+
+As informações inseridas no aplicativo são armazenadas apenas no dispositivo do usuário.
+
+O desenvolvedor não possui acesso aos dados inseridos no aplicativo.
+
+O aplicativo não exige cadastro nem solicita informações pessoais como nome, CPF ou dados bancários para funcionar. No entanto, para utilizar o app é necessário aceitar nossa Política de Privacidade e nossos Termos de Uso logo na instalação. Ao clicar em “Entrar”, você confirma estar de acordo com esses documentos legais.
+
+Durante o acesso, o aplicativo registra apenas a data, a hora e o identificador do dispositivo. Esses dados não são enviados a servidores externos, permanecendo armazenados exclusivamente no próprio dispositivo do usuário. O objetivo desse registro é garantir transparência quanto à concordância com nossa Política de Privacidade e Termos de Uso.
+
+O aplicativo pode utilizar serviços de terceiros que realizam coleta de dados de forma independente, conforme descrito nesta política.
+
+# 2. Publicidade (Google AdMob)
+
+Para possibilitar o acesso gratuito, o aplicativo exibe anúncios por meio do serviço Google AdMob.
+
+O que é coletado: O Google AdMob pode coletar identificadores técnicos do dispositivo (como o ID de publicidade) e outros dados necessários para a exibição e personalização de anúncios.
+
+# 3. Seus controles de privacidade  
+Os dados inseridos no aplicativo são seus, e você pode acessá-los ou excluí-los a qualquer momento pelo próprio app.
+
+De acordo com a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018), você tem direitos sobre suas informações. Caso queira exercer esses direitos, basta entrar em contato pelo nosso canal oficial.
+
+Armazenamento Local: Todos os dados inseridos são salvos exclusivamente no seu dispositivo móvel, garantindo a sua privacidade e autonomia.
+Exclusão pelo Usuário: Você pode excluir seus registros a qualquer momento através das opções disponíveis em configurações ou nos menus internos do aplicativo.
+Ao desinstalar o app, todas as informações serão apagadas permanentemente e não poderão ser recuperadas por meio próprio do app. O gerenciamento e a exclusão dos dados ficam sob controle do próprio usuário.
+
+No entanto, se o recurso de Backup Automático do Android estiver ativo em seu aparelho, uma cópia das informações poderá permanecer vinculada à sua conta Google na nuvem para futuras restaurações, conforme citado no item 6 deste documento.
+
+# 4. Funcionalidades do Aplicativo
+
+O aplicativo pode oferecer funcionalidades como compartilhamento do app e redirecionamento para avaliação na Google Play. O compartilhamento utiliza recursos nativos do dispositivo, sem coleta de dados pessoais. Ao acessar a Google Play, o usuário estará sujeito às políticas da plataforma.
+
+# 5. Processamento de Pagamentos de Assinaturas
+O aplicativo oferece opções de assinatura Premium. Nós não coletamos dados pessoais, localização, e não processamos ou armazenamos quaisquer dados financeiros dos usuários do app. Todos os pagamentos e assinaturas são gerenciados e processados de forma exclusiva pela Google Play Store, por meio da Google Play Billing API. O aplicativo recebe apenas as confirmações e os identificadores técnicos da transação enviados pela plataforma da Google para validar o status da assinatura e liberar os recursos Premium no dispositivo.
+
+
+# 6. Exportação de Dados e Backup Manual
+O aplicativo pode permitir a exportação de informações para arquivos em formatos como PDF e Excel.
+
+Esses arquivos são gerados a partir dos dados inseridos pelo usuário e podem ser salvos no dispositivo ou em outro local definido pelo próprio usuário.
+
+As funções de exportação, backup e restauração são feitas diretamente pelo usuário, incluindo a escolha do local de salvamento. Nenhum dado é enviado para servidores externos.
+
+# 7. Backup Automático e Segurança de Dados
+Para garantir que você não perca suas informações ao trocar de dispositivo ou reinstalar o aplicativo, o AG Gastos e Contas da Casa utiliza o recurso nativo de Backup Automático do Sistema Android.
+
+Como funciona: O aplicativo está configurado para permitir que o sistema Android realize cópias de segurança automáticas dos dados locais (banco de dados de despesas, assinaturas e preferências de tema).
+
+Destino dos dados: Essas cópias são enviadas criptografadas para a nuvem do Google, vinculada à sua Conta Google pessoal. Os dados são armazenados de forma privada em uma área de backup do Google Drive, não sendo acessíveis por terceiros ou pelo desenvolvedor do aplicativo.
+
+Restauração: Ao reinstalar o aplicativo ou configurar um novo dispositivo com a mesma conta Google, o sistema Android restaurará automaticamente suas informações.
+
+Requisitos e Limitações: O funcionamento deste recurso depende de:
+A opção "Backup" estar ativada nas configurações do seu dispositivo Android.
+Conexão ativa com a internet (preferencialmente Wi-Fi).
+Estar logado em uma Conta Google válida.
+
+Embora o recurso utilize a infraestrutura de segurança do Google, recomendamos que o usuário mantenha as configurações de backup do sistema sempre ativas, ciente de que o processo é gerenciado inteiramente pelo sistema operacional Android e pelos serviços do Google.
+
+# 8. Processamento de Dados
+Todos os cálculos são processados localmente, sem envio de informações para servidores externos.
+
+# 9. Atualizações da Política de Privacidade
+Esta Política de Privacidade pode ser atualizada a qualquer momento para refletir melhorias ou mudanças no aplicativo. Recomendamos que o usuário consulte regularmente esta seção, a fim de estar sempre informado sobre eventuais alterações.
+
+# 10. Legislação e Foro
+Este termo é regido pela legislação brasileira.
+Todas as questões, litígios ou reclamações relacionadas à interpretação, execução ou uso do aplicativo serão solucionados perante o Foro da Comarca de Itaboraí/RJ, eleito pelas partes como competente, mesmo que haja outro mais privilegiado, observadas as disposições legais aplicáveis ao consumidor.
+
+# 11. Contato
+Caso tenha qualquer dúvida sobre esta política ou sobre o funcionamento do aplicativo, entre em contato pelo canal oficial:
+
+E-mail de Contato: suporte.agneonpower@gmail.com
+
+Responsável: Alziro Guarany
+            `
+        };
+
+        function renderizarPolitica() {
+            // Aplicar a cor do tema às variáveis e ao fundo
+            document.documentElement.style.setProperty('--cor-tema', CONFIG.corTema);
+            
+            // Extrair nome do App
+            const partesTitulo = CONFIG.tituloApp.split(' – ');
+            const nomeExtraido = partesTitulo.length > 1 ? partesTitulo[1] : CONFIG.tituloApp;
+            const nomeFinalApp = CONFIG.nomeAppManual.trim() !== "" ? CONFIG.nomeAppManual : nomeExtraido;
+
+            // Preencher campos fixos
+            document.getElementById('app-titulo-principal').innerText = CONFIG.tituloApp;
+            document.getElementById('app-introducao').innerText = CONFIG.introducao;
+            document.getElementById('app-footer-nome').innerText = nomeFinalApp;
+            document.getElementById('ultima-atualizacao').innerText = "Última atualização: " + CONFIG.dataAtualizacao;
+            document.getElementById('ano-atual').innerText = new Date().getFullYear();
+
+            // Processar o corpo do texto
+            const main = document.getElementById('conteudo-legal');
+            const linhas = CONFIG.textoLegal.trim().split('\n');
+            let htmlFinal = "";
+
+            linhas.forEach(linha => {
+                let textoLimpo = linha.trim();
+                if (textoLimpo.startsWith('#')) {
+                    let titulo = textoLimpo.replace('#', '').trim();
+                    htmlFinal += `<span class="titulo-item">${titulo}</span>`;
+                } else if (textoLimpo !== "") {
+                    htmlFinal += `<p>${textoLimpo}</p>`;
+                }
+            });
+
+            main.innerHTML = htmlFinal;
+        }
+
+        window.onload = renderizarPolitica;
+    </script>
 </body>
 </html>
