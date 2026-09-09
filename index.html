@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alziro Guarany | Portfólio & Tutoriais</title>
+    <title>Alziro Guarany</title>
     <!-- Fontes Modernas -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,7 +78,7 @@
 
         .nav-menu {
             display: flex;
-            gap: 32px;
+            gap: 8px;
             list-style: none;
             align-items: center;
         }
@@ -95,63 +95,7 @@
             color: var(--primary);
         }
 
-        .dropdown {
-            position: relative;
-        }
-
-        .dropdown-trigger {
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .dropdown-menu {
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background: white;
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-            min-width: 260px;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(10px);
-            transition: all 0.3s ease;
-            padding: 16px 0;
-        }
-
-        .dropdown:hover .dropdown-menu {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .dropdown-item {
-            padding: 12px 20px;
-            display: block;
-            text-decoration: none;
-            color: var(--text-main);
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: background 0.2s;
-        }
-
-        .dropdown-item:hover {
-            background: var(--card-blue);
-            color: var(--primary);
-        }
-
-        .sub-menu-title {
-            padding: 0 20px 10px;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            font-weight: 800;
-            color: var(--text-muted);
-            letter-spacing: 0.08em;
-        }
-
+      
         .hero {
             padding: 180px 24px 100px;
             text-align: center;
@@ -180,7 +124,7 @@
         }
 
         section {
-            padding: 100px 24px;
+            padding: 40px 24px;
             max-width: 1100px;
             margin: 0 auto;
         }
@@ -413,10 +357,7 @@
             <ul class="nav-menu">
                 <li><a href="#apps" class="nav-link">Meus Apps</a></li>
                 <li class="dropdown">
-                    <span class="nav-link dropdown-trigger">Tutoriais ▼</span>
-                    <div class="dropdown-menu">
-                        <div class="sub-menu-title">Inteligência Artificial</div>
-                        <a href="https://alziroguarany.github.io/instalarclaudecode.html" class="dropdown-item">Instalar Claude Code no Windows</a>
+              
                     </div>
                 </li>
                 <li><a href="#youtube" class="nav-link">Meu Canal</a></li>
@@ -448,7 +389,7 @@
                     <p>Assuma o controle total da sua vida financeira com o AG Finanças: Controle Gastos. Gerencie suas contas de forma prática, acompanhando renda, despesas e assinaturas.</p>
                     <div class="btn-group">
                         <a href="https://play.google.com/store/apps/details?id=com.seuapp.agfinanceirocontrolegastos" class="btn btn-primary" target="_blank">Download Play Store</a>
-                        <a href="https://alziroguarany.github.io/agfinanceirocontrolegastos.html" class="btn btn-outline" target="_blank">Privacidade</a>
+                        
                     </div>
                 </div>
 
@@ -459,21 +400,32 @@
                     <p>Mantenha o controle total do seu botijão. Uma ferramenta indispensável para prever a duração do gás baseada no seu consumo real.</p>
                     <div class="btn-group">
                         <a href="https://play.google.com/store/apps/details?id=com.ag.previsodogs" class="btn btn-primary" target="_blank">Download Play Store</a>
-                        <a href="https://alziroguarany.github.io/politica-gas.html" class="btn btn-outline" target="_blank">Privacidade</a>
+                       
                     </div>
                 </div>
 
-                <!-- App 3: Combustível -->
+                <!-- App 3: AG Veículos -->
                 <div class="card">
                     <div class="card-icon" style="color: #2563eb; border-color: #93c5fd;">⛽</div>
-                    <h3>AG Combustível - Meu Consumo</h3>
+                    <h3>AG Gastos Com Veículos</h3>
                     <p>Economize na hora de abastecer. Saiba rapidamente se compensa usar Álcool ou Gasolina com cálculos de eficiência em tempo real.</p>
                     <div class="btn-group">
                         <a href="https://play.google.com/store/apps/details?id=com.neonlab.combustivel" class="btn btn-primary" target="_blank">Download Play Store</a>
-                        <a href="https://alziroguarany.github.io/agcombustivel.html" class="btn btn-outline" target="_blank">Privacidade</a>
+                        
                     </div>
                 </div>
-            </div>
+
+            <!-- App 4: AG Controle Gastos -->
+                <div class="card">
+                    <div class="card-icon" style="color: #10b981; border-color: #a7f3d0;">🐷</div>
+                    <h3>AG Controle Gastos Fácil</h3>
+                    <p>O AG Controle Gastos Fácil é o aplicativo ideal para quem já sabe quanto ganha e quer focar no que realmente importa: lançar e controlar apenas seus gastos e despesas com assinaturas com total praticidade.</p>
+                    <div class="btn-group">
+                        <a href="https://play.google.com/store/apps/details?id=com.alziroguarany.aggastosedacasa" class="btn btn-primary" target="_blank">Download Play Store</a>
+                       
+                    </div>
+                </div>
+
         </section>
 
         <section id="youtube">
